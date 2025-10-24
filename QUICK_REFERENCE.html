@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeForge - Quick Reference Card</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 3px solid #667eea;
+        }
+        .card h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+        }
+        .card h2::before {
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+        .card.links h2::before { content: '🌐'; }
+        .card.domain h2::before { content: '🏠'; }
+        .card.storage h2::before { content: '💾'; }
+        .card.commands h2::before { content: '💻'; }
+        .link-box {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .link-box strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        .link-box a, .link-box code {
+            color: #2d3748;
+            text-decoration: none;
+            font-size: 0.85em;
+            word-break: break-all;
+            display: block;
+            background: #f7fafc;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        .link-box a:hover {
+            background: #667eea;
+            color: white;
+        }
+        .command-box {
+            background: #2d3748;
+            color: #a8e063;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+        }
+        .command-box .comment {
+            color: #74ebd5;
+            font-style: italic;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .important {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-color: #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 3px solid #f39c12;
+        }
+        .important h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        .copy-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8em;
+            float: right;
+            margin-top: -5px;
+        }
+        .copy-btn:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 ResumeForge Quick Reference</h1>
+        <p class="subtitle">Everything you need to remember in one place</p>
+
+        <!-- Important Box -->
+        <div class="important">
+            <h3>⭐ Most Important Information</h3>
+            <div class="link-box">
+                <strong>🌐 MAIN LIVE WEBSITE:</strong>
+                <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app" target="_blank">
+                    https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app
+                </a>
+            </div>
+            <div class="link-box">
+                <strong>🔐 LOGIN PAGE:</strong>
+                <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/pages/login.html" target="_blank">
+                    https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/pages/login.html
+                </a>
+            </div>
+            <div class="link-box">
+                <strong>💻 UPDATE WEBSITE COMMAND:</strong>
+                <div class="command-box">
+                    npm run build:css && vercel --prod --yes
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Links Card -->
+            <div class="card links">
+                <h2>Website Links</h2>
+                
+                <div class="link-box">
+                    <strong>Homepage</strong>
+                    <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/" target="_blank">
+                        .../
+                    </a>
+                </div>
+
+                <div class="link-box">
+                    <strong>Login Page</strong>
+                    <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/pages/login.html" target="_blank">
+                        .../pages/login.html
+                    </a>
+                </div>
+
+                <div class="link-box">
+                    <strong>Resume Builder</strong>
+                    <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/pages/resume_builder.html" target="_blank">
+                        .../pages/resume_builder.html
+                    </a>
+                </div>
+
+                <div class="link-box">
+                    <strong>Register</strong>
+                    <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/pages/register.html" target="_blank">
+                        .../pages/register.html
+                    </a>
+                </div>
+
+                <div class="link-box">
+                    <strong>Dashboard</strong>
+                    <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/pages/dashboard.html" target="_blank">
+                        .../pages/dashboard.html
+                    </a>
+                </div>
+
+                <div class="link-box">
+                    <strong>Vercel Dashboard</strong>
+                    <a href="https://vercel.com/alphaqueen768-1548s-projects/resumeforge" target="_blank">
+                        vercel.com/.../resumeforge
+                    </a>
+                </div>
+            </div>
+
+            <!-- Domain Card -->
+            <div class="card domain">
+                <h2>Domain & Account</h2>
+                
+                <div class="link-box">
+                    <strong>Domain Name</strong>
+                    <code>resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app</code>
+                </div>
+
+                <div class="link-box">
+                    <strong>Project Name</strong>
+                    <code>resumeforge</code>
+                </div>
+
+                <div class="link-box">
+                    <strong>Vercel Account</strong>
+                    <code>alphaqueen768-1548s-projects</code>
+                </div>
+
+                <div class="link-box">
+                    <strong>Platform</strong>
+                    <code>Vercel</code>
+                </div>
+
+                <div class="link-box">
+                    <strong>Local Project Path</strong>
+                    <code>c:\Users\pc\Desktop\vs code\project resume</code>
+                </div>
+            </div>
+
+            <!-- Storage Card -->
+            <div class="card storage full-width">
+                <h2>Login Data Storage</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="link-box" style="background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);">
+                        <strong>📊 MongoDB Database (Permanent)</strong>
+                        <code style="background: white;">mongodb://localhost:27017/resumeforge</code>
+                        <br><br>
+                        <strong>Collection:</strong> <code style="background: white;">users</code>
+                        <br><br>
+                        <strong>Stores:</strong>
+                        <ul style="margin-top: 8px; padding-left: 20px; font-size: 0.85em;">
+                            <li>Email (unique)</li>
+                            <li>Password (bcrypt hashed)</li>
+                            <li>Profile info</li>
+                            <li>Preferences</li>
+                            <li>Resume IDs</li>
+                        </ul>
+                    </div>
+
+                    <div class="link-box" style="background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);">
+                        <strong>💾 Browser localStorage (Session)</strong>
+                        <code style="background: white;">Browser → F12 → Application → Local Storage</code>
+                        <br><br>
+                        <strong>Stores:</strong>
+                        <ul style="margin-top: 8px; padding-left: 20px; font-size: 0.85em;">
+                            <li><code style="background: white;">token</code> - JWT (7 days)</li>
+                            <li><code style="background: white;">user</code> - User info</li>
+                        </ul>
+                        <br>
+                        <strong>View in Console:</strong>
+                        <div class="command-box" style="margin-top: 8px;">
+                            console.log(localStorage.getItem('token'));
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commands Card -->
+            <div class="card commands full-width">
+                <h2>Essential Commands</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                    <div class="link-box">
+                        <strong>1️⃣ Build CSS</strong>
+                        <div class="command-box">
+                            npm run build:css
+                            <div class="comment"># Compiles Tailwind CSS</div>
+                        </div>
+                    </div>
+
+                    <div class="link-box">
+                        <strong>2️⃣ Deploy to Production</strong>
+                        <div class="command-box">
+                            vercel --prod --yes
+                            <div class="comment"># Deploys to live website</div>
+                        </div>
+                    </div>
+
+                    <div class="link-box">
+                        <strong>3️⃣ Start Local Server</strong>
+                        <div class="command-box">
+                            node server.js
+                            <div class="comment"># Runs at localhost:3000</div>
+                        </div>
+                    </div>
+
+                    <div class="link-box">
+                        <strong>4️⃣ Install Dependencies</strong>
+                        <div class="command-box">
+                            npm install
+                            <div class="comment"># Installs all packages</div>
+                        </div>
+                    </div>
+
+                    <div class="link-box">
+                        <strong>5️⃣ View MongoDB Data</strong>
+                        <div class="command-box">
+                            mongosh<br>
+                            use resumeforge<br>
+                            db.users.find().pretty()
+                        </div>
+                    </div>
+
+                    <div class="link-box">
+                        <strong>6️⃣ Quick Update (All-in-One)</strong>
+                        <div class="command-box">
+                            npm run build:css && vercel --prod --yes
+                            <div class="comment"># Build + Deploy in one command</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Locations -->
+        <div class="card full-width" style="margin-top: 20px;">
+            <h2 style="margin-bottom: 20px;">📁 Important File Locations</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                <div class="link-box">
+                    <strong>Login Page</strong>
+                    <code>pages/login.html</code>
+                </div>
+                <div class="link-box">
+                    <strong>Auth Routes</strong>
+                    <code>routes/auth.js</code>
+                </div>
+                <div class="link-box">
+                    <strong>Auth Controller</strong>
+                    <code>controllers/authController.js</code>
+                </div>
+                <div class="link-box">
+                    <strong>User Model</strong>
+                    <code>models/User.js</code>
+                </div>
+                <div class="link-box">
+                    <strong>Database Config</strong>
+                    <code>config/database.js</code>
+                </div>
+                <div class="link-box">
+                    <strong>Environment</strong>
+                    <code>.env</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="card full-width" style="margin-top: 20px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-color: #e74c3c;">
+            <h2 style="margin-bottom: 15px;">✨ Current Website Features</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <span class="tag">✅ Enhanced Login Page</span>
+                <span class="tag">✅ 8 Resume Templates</span>
+                <span class="tag">✅ PDF Download</span>
+                <span class="tag">✅ Color Customization</span>
+                <span class="tag">✅ Mobile Responsive</span>
+                <span class="tag">✅ Form Validation</span>
+                <span class="tag">✅ Password Toggle</span>
+                <span class="tag">✅ MongoDB Storage</span>
+                <span class="tag">✅ JWT Authentication</span>
+                <span class="tag">✅ Session Management</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #e2e8f0; color: #718096;">
+            <p style="margin-bottom: 10px;">📄 <strong>Complete Documentation:</strong> <code>QUICK_REFERENCE.md</code></p>
+            <p style="margin-bottom: 10px;">📊 <strong>Data Flow Diagram:</strong> <code>docs/LOGIN_DATA_FLOW.md</code></p>
+            <p>🎨 <strong>Visual Guide:</strong> <code>docs/storage-visualization.html</code></p>
+            <hr style="margin: 20px 0; border: 1px solid #e2e8f0;">
+            <p style="font-size: 0.9em; color: #a0aec0;">
+                <strong>Last Updated:</strong> 2025-10-24 | 
+                <strong>Latest Deployment:</strong> <a href="https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app" target="_blank" style="color: #667eea; text-decoration: none;">View Live Site →</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Copy to clipboard functionality
+        document.querySelectorAll('.command-box').forEach(box => {
+            const btn = document.createElement('button');
+            btn.className = 'copy-btn';
+            btn.textContent = '📋 Copy';
+            btn.onclick = () => {
+                const text = box.textContent.replace('📋 Copy', '').trim();
+                navigator.clipboard.writeText(text);
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => btn.textContent = '📋 Copy', 2000);
+            };
+            box.appendChild(btn);
+        });
+    </script>
+</body>
+</html>

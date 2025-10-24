@@ -1,0 +1,205 @@
+═══════════════════════════════════════════════════════════════════
+                    RESUMEFORGE - QUICK REFERENCE
+                         SAVE THIS FILE!
+═══════════════════════════════════════════════════════════════════
+
+🌐 MAIN LIVE WEBSITE:
+═══════════════════════════════════════════════════════════════════
+https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app
+
+
+🔐 LOGIN PAGE:
+═══════════════════════════════════════════════════════════════════
+https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/pages/login.html
+
+
+🏠 DOMAIN NAME:
+═══════════════════════════════════════════════════════════════════
+resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app
+
+
+📱 OTHER IMPORTANT PAGES:
+═══════════════════════════════════════════════════════════════════
+Resume Builder:  .../pages/resume_builder.html
+Register:        .../pages/register.html
+Dashboard:       .../pages/dashboard.html
+Homepage:        .../
+
+
+🗄️ WHERE LOGIN DATA IS STORED:
+═══════════════════════════════════════════════════════════════════
+
+1. MONGODB DATABASE (Permanent Storage):
+   ├─ Connection: mongodb://localhost:27017/resumeforge
+   ├─ Database: resumeforge
+   ├─ Collection: users
+   └─ Data: Email, hashed password, profile, preferences
+
+2. BROWSER LOCALSTORAGE (Session Storage):
+   ├─ Location: Browser → F12 → Application → Local Storage
+   ├─ token: JWT authentication token (7 days)
+   └─ user: User profile info (JSON)
+
+
+📁 LOGIN FILE LOCATIONS ON YOUR COMPUTER:
+═══════════════════════════════════════════════════════════════════
+c:\Users\pc\Desktop\vs code\project resume\pages\login.html
+c:\Users\pc\Desktop\vs code\project resume\routes\auth.js
+c:\Users\pc\Desktop\vs code\project resume\controllers\authController.js
+c:\Users\pc\Desktop\vs code\project resume\models\User.js
+c:\Users\pc\Desktop\vs code\project resume\config\database.js
+c:\Users\pc\Desktop\vs code\project resume\.env
+
+
+💻 MOST IMPORTANT COMMANDS TO REMEMBER:
+═══════════════════════════════════════════════════════════════════
+
+1. UPDATE WEBSITE (All-in-One):
+   npm run build:css && vercel --prod --yes
+
+2. Build CSS Only:
+   npm run build:css
+
+3. Deploy to Production:
+   vercel --prod --yes
+
+4. Start Local Server:
+   node server.js
+
+5. View MongoDB Data:
+   mongosh
+   use resumeforge
+   db.users.find().pretty()
+
+6. Install Dependencies:
+   npm install
+
+
+🔄 COMPLETE WORKFLOW TO UPDATE WEBSITE:
+═══════════════════════════════════════════════════════════════════
+
+Step 1: Make your code changes (edit HTML, CSS, JS files)
+
+Step 2: Build CSS
+        cd "c:\Users\pc\Desktop\vs code\project resume"
+        npm run build:css
+
+Step 3: Deploy to production
+        vercel --prod --yes
+
+Step 4: Wait ~15-20 seconds for deployment to complete
+
+Step 5: Visit your live website to see changes
+
+
+🔍 HOW TO VIEW STORED LOGIN DATA:
+═══════════════════════════════════════════════════════════════════
+
+VIEW MONGODB (Database):
+------------------------
+mongosh
+use resumeforge
+db.users.find().pretty()
+db.users.findOne({ email: "user@example.com" })
+
+
+VIEW LOCALSTORAGE (Browser Console - Press F12):
+------------------------------------------------
+console.log(localStorage.getItem('token'));
+console.log(localStorage.getItem('user'));
+console.log(JSON.parse(localStorage.getItem('user')));
+
+
+DECODE JWT TOKEN (Browser Console):
+-----------------------------------
+const token = localStorage.getItem('token');
+const payload = JSON.parse(atob(token.split('.')[1]));
+console.log(payload);
+
+
+📊 API ENDPOINTS:
+═══════════════════════════════════════════════════════════════════
+
+Base URL (Production):
+https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app/api
+
+Login:      POST /api/auth/login
+Register:   POST /api/auth/register
+Profile:    GET  /api/auth/profile
+Resumes:    GET  /api/resumes
+            POST /api/resumes
+
+
+🎯 PROJECT INFORMATION:
+═══════════════════════════════════════════════════════════════════
+Project Name:    resumeforge
+Vercel Account:  alphaqueen768-1548s-projects
+Platform:        Vercel
+Local Path:      c:\Users\pc\Desktop\vs code\project resume
+MongoDB DB:      resumeforge
+MongoDB Coll:    users
+
+
+✨ CURRENT FEATURES:
+═══════════════════════════════════════════════════════════════════
+✅ Enhanced Login Page with storage info
+✅ 8 Professional Resume Templates
+✅ Color Customization (Primary, Accent, Text)
+✅ Real PDF Download (html2pdf.js)
+✅ Mobile-Responsive Design
+✅ Form Validation
+✅ Password Show/Hide Toggle
+✅ MongoDB User Storage
+✅ JWT Authentication (7-day expiration)
+✅ Session Management (localStorage)
+
+
+📚 DOCUMENTATION FILES (ON YOUR COMPUTER):
+═══════════════════════════════════════════════════════════════════
+QUICK_REFERENCE.md           ← Complete reference (589 lines)
+QUICK_REFERENCE.html         ← Visual quick reference (opened)
+docs/LOGIN_DATA_FLOW.md      ← Technical docs (368 lines)
+docs/LOGIN_SUMMARY.md        ← Quick summary (146 lines)
+docs/storage-visualization.html  ← Interactive diagram
+
+
+🔗 VERCEL DASHBOARD:
+═══════════════════════════════════════════════════════════════════
+https://vercel.com/alphaqueen768-1548s-projects/resumeforge
+
+
+🛡️ SECURITY:
+═══════════════════════════════════════════════════════════════════
+✓ Passwords hashed with bcrypt (10 salt rounds)
+✓ JWT tokens with HS256 encryption
+✓ Token auto-expires after 7 days
+✓ HTTPS in production
+✓ Environment variables protected (.env file)
+
+
+💡 QUICK TIPS:
+═══════════════════════════════════════════════════════════════════
+• Always run "npm run build:css" before deploying
+• Test locally first: node server.js → http://localhost:3000
+• MongoDB must be running for login to work
+• Check browser console (F12) for debug info
+• Login page shows storage locations at bottom
+
+
+📞 SUPPORT RESOURCES:
+═══════════════════════════════════════════════════════════════════
+Vercel Docs:    https://vercel.com/docs
+MongoDB Docs:   https://www.mongodb.com/docs/
+Tailwind Docs:  https://tailwindcss.com/docs
+
+
+═══════════════════════════════════════════════════════════════════
+                        LAST UPDATED
+═══════════════════════════════════════════════════════════════════
+Date: 2025-10-24
+Latest Deployment: https://resumeforge-f1g7ngsr1-alphaqueen768-1548s-projects.vercel.app
+
+═══════════════════════════════════════════════════════════════════
+                     SAVE THIS FILE FOR FUTURE REFERENCE!
+                   File Location: QUICK_REFERENCE.txt
+═══════════════════════════════════════════════════════════════════
