@@ -1,3 +1,10 @@
+/*
+ * Tailwind CSS Configuration File
+ * 
+ * This configuration file defines how Tailwind CSS should process your project's files.
+ * The 'content' section specifies which files Tailwind should scan for class names.
+ * The output is written to ./css/main.css via the build process.
+ */
 module.exports = {
   content: [
     "./pages/*.{html,js}",

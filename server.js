@@ -11,6 +11,7 @@ const Resume = require('./models/Resume');
 const authRoutes = require('./routes/auth');
 const resumeRoutes = require('./routes/resumes');
 const publicRoutes = require('./routes/public');
+const adminRoutes = require('./routes/admin');
 const pdfController = require('./controllers/pdfController');
 const { authenticateToken } = require('./middleware/auth');
 
@@ -108,6 +109,7 @@ app.get('/pages/dashboard.html', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/resumes', resumeRoutes);
 app.use('/api/share', publicRoutes);
+app.use('/api/admin', adminRoutes);
 
 // PDF download routes
 app.get('/api/resumes/:id/download', authenticateToken, pdfController.downloadPDF);
